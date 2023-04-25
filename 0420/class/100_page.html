@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="fruits-list">
+  </ul>
+
+  <script>
+    const fruits = ['사과', '바나나', '오렌지', '아보카도',]
+    const ul = document.querySelector('#fruits-list')
+    fruits.forEach(Element => {
+      const li = document.createElement('li')
+      li.innerText = Element
+      ul.appendChild(li)
+    })
+  </script>
+</body>
+</html>

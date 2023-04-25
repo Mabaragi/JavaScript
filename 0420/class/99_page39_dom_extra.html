@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS DOM</title>
+</head>
+<style>
+  .red {
+    color: red;
+  }
+
+  .big {
+    font-size: 32px;
+  }
+</style>
+<body>
+  <h1>selector test</h1>
+
+  <button id="event-button">커져라!</button>
+
+  <ul id="list">
+    <li class="red">apple</li>
+    <li>orange</li>
+    <li id="banana">banana</li>
+    <li>grape</li>
+    <li class="red">strawberry</li>
+  </ul>
+
+  <script>
+    // // strawberry 아래에 새로운 과일 하나를 더 추가하시오.
+    // const mango = document.createElement("li")
+    // mango.innerText = '망고'
+    // const parent = document.querySelector('#list')
+    // parent.appendChild(mango)
+
+    // // apple 위에 새로운 과일을 하나 더 추가 하시오.
+    // const pineapple = document.createElement("li")
+    // pineapple.innerText = '파인애플'
+    // parent.prepend(pineapple)
+
+    // orange와 banana 사이에 새로운 과일을 하나 더 추가하시오.
+    // const abocado = document.createElement("li")
+    // abocado.innerText = '아보카도'
+    // const banana = document.querySelector("#banana")
+    // parent.insertBefore(abocado, banana)
+
+    // class가 'red'인 노드 모두 삭제
+    
+
+    // 모든 li 태그의 글자 크기를 키워보세요.
+    // const lis = document.querySelectorAll('li')
+    // lis.forEach(elements => elements.setAttribute())
+
+    // 버튼을 누르면 이벤트 실행하기 (4일차 내용 맛보기)
+    const button = document.querySelector('#event-button')
+    button.addEventListener('click', () => {
+      changeFont()
+    })
+    function changeFont() {
+      const LiTags = document.querySelectorAll('li')
+      LiTags.forEach(element => {
+        element.classList.add('big')
+      })
+    }
+
+  </script>
+</body>
+</html>
